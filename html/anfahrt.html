@@ -60,9 +60,13 @@
         }
 
         .map-responsive {
-          height: 300px;
-          padding-bottom: 0;
+          position: relative;
+          padding-bottom: 56.25%; /* 16:9 Verhältnis */
+          height: 0;
+          overflow: hidden;
+          min-height: 300px; /* Fallback für zu kleine Höhen */
         }
+
 
         #info {
           width: 100%;
