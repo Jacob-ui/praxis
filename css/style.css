@@ -264,3 +264,65 @@ p {
 .cv-list li:last-child {
   border-bottom: none;
 }
+.anfahrt-page .content-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+  flex-direction: row;
+}
+
+.anfahrt-page .main-content {
+  flex: 0 0 65%;
+  min-width: 300px;
+}
+
+.anfahrt-page #info {
+  flex: 0 0 35%;
+  min-width: 250px;
+  float: none !important;  /* Falls float durch andere CSS gesetzt wird */
+  width: auto !important;  /* Überschreibt feste Breite falls gesetzt */
+  padding: 20px 25px;
+  position: sticky;
+  top: 2rem;
+}
+
+/* Karte */
+.anfahrt-page .map-responsive {
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.anfahrt-page .map-responsive iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+}
+
+/* Responsive unter 1000px */
+@media (max-width: 1000px) {
+  .anfahrt-page .content-wrapper {
+    flex-direction: column;
+  }
+  .anfahrt-page .main-content,
+  .anfahrt-page #info {
+    flex: none;
+    width: 100% !important;
+    min-width: unset;
+    position: relative !important;
+    top: auto !important;
+  }
+  .anfahrt-page #info {
+    margin-top: 2rem;
+  }
+  .anfahrt-page .map-responsive {
+    padding-bottom: 0;
+    height: 300px;
+  }
+}
