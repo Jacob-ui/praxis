@@ -53,10 +53,26 @@
           height: 300px; /* feste Höhe */
           padding-bottom: 0; /* Seitenverhältnis deaktivieren */
         }
-              #info {
-        flex: 0 0 100px;
       }
+      @media (max-width: 1000px) {
+        .content-wrapper {
+          flex-direction: column;
+        }
+
+        .map-responsive {
+          height: 300px;
+          padding-bottom: 0;
+        }
+
+        #info {
+          width: 100%;
+          margin-top: 2rem;
+          margin-left: 0;
+          position: relative;
+          top: auto;
+        }
       }
+
 
 
     </style>
