@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../navbar/navbar.css" />
+    <title>Responsive Navbar</title>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="slide" onclick="openSlidebar()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="menu">
+        <a href="#">Startseite</a>
+        <a href="#">Die Praxis</a>
+        <div class="dropdown">
+            <a href="#">Leistungen</a>
+            <div class="dropdown-content">
+                <a href="#">Leistung 1</a>
+                <a href="#">Leistung 2</a>
+                <a href="#">Leistung 3</a>
+            </div>
+        </div>
+        <a href="#">Anfahrt</a>
+        <a href="#">Links</a>
+        <a href="#">Impressum</a>
+    </div>
+    <div class="doctor">Dr. Thomas Gotter</div>
+</div>
+
+<div id="slidebar" class="slidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeSlidebar()">&times;</a>
+    <a href="#">Startseite</a>
+    <a href="#">Die Praxis</a>
+    <div class="dropdown">
+        <a href="#">Leistungen</a>
+        <div class="dropdown-content">
+            <a href="#">Leistung 1</a>
+            <a href="#">Leistung 2</a>
+            <a href="#">Leistung 3</a>
+        </div>
+    </div>
+    <a href="#">Anfahrt</a>
+    <a href="#">Links</a>
+    <a href="#">Impressum</a>
+</div>
+
+<script>
+    function openSlidebar() {
+        document.getElementById("slidebar").style.width = "250px";
+    }
+
+    function closeSlidebar() {
+        document.getElementById("slidebar").style.width = "0";
+    }
+</script>
+
+</body>
+</html>
